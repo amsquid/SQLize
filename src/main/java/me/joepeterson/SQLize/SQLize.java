@@ -7,6 +7,10 @@ import java.awt.event.WindowEvent;
 
 public class SQLize extends JFrame implements ActionListener {
 
+	// Fields
+	private DatabaseManager databaseManager;
+
+	// Menu items
 	private JMenuItem newDBItem;
 	private JMenuItem exitItem;
 
@@ -16,6 +20,9 @@ public class SQLize extends JFrame implements ActionListener {
 	}
 
 	public void run() {
+		// Field setup
+		databaseManager = new DatabaseManager();
+
 		// Frame setup
 		setTitle("SQLize");
 		setSize(1200, 800);
